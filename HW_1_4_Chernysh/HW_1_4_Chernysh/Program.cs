@@ -14,19 +14,20 @@ namespace HW_1_4_Chernysh
             {
                 list.Add(c);
             }
+
             char[] alphabet = list.ToArray();
 
             Console.WriteLine("Введите размер массива: ");
-            int N = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            int[] arr = new int[N];
+            int[] arr = new int[n];
 
             Random random = new Random();
 
             int evenNums = 0;
             int oddNums = 0;
 
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < n; i++)
             {
                 arr[i] = random.Next(1, 26);
 
@@ -46,7 +47,7 @@ namespace HW_1_4_Chernysh
             int indexEven = 0;
             int indexOdd = 0;
 
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < n; i++)
             {
                 if (arr[i] % 2 == 0)
                 {
@@ -65,11 +66,8 @@ namespace HW_1_4_Chernysh
 
             Console.WriteLine("Вывод чётного массива: ");
 
-
             for (int i = 0; i < indexEven; i++)
             {
-
-
                 evenNumsArray[i] = alphabet[(int)evenNumsArray[i]];
 
                 if ((char)evenNumsArray[i] == 'A' || (char)evenNumsArray[i] == 'E' ||
@@ -78,7 +76,10 @@ namespace HW_1_4_Chernysh
                 {
                     counterEven++;
                 }
-                else evenNumsArray[i] = evenNumsArray[i].ToString().ToLower();
+                else
+                {
+                    evenNumsArray[i] = evenNumsArray[i].ToString().ToLower();
+                }
 
                 Console.Write(evenNumsArray[i] + " ");
             }
@@ -89,7 +90,6 @@ namespace HW_1_4_Chernysh
 
             for (int i = 0; i < indexOdd; i++)
             {
-
                 oddNumsArray[i] = alphabet[(int)oddNumsArray[i]];
 
                 if ((char)oddNumsArray[i] == 'A' || (char)oddNumsArray[i] == 'E' ||
@@ -98,8 +98,10 @@ namespace HW_1_4_Chernysh
                 {
                     counterOdd++;
                 }
-                else oddNumsArray[i] = oddNumsArray[i].ToString().ToLower();
-
+                else
+                {
+                    oddNumsArray[i] = oddNumsArray[i].ToString().ToLower();
+                }
 
                 Console.Write(oddNumsArray[i] + " ");
             }
