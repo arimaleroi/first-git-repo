@@ -9,7 +9,9 @@ namespace HW_2_3_Chernysh
     internal class Vehicle
     {
         public int MaxSpeed { get; set; }
+
         public int Weight { get; set; }
+
         public string TypeOfVehicle { get; set; }
 
         public Vehicle(int maxSpeed, int weight)

@@ -11,7 +11,6 @@ namespace HW_2_3_Chernysh.Logger
 {
     internal class Json
     {
-
         public static string JsonLogger(Result log)
         {
             var options = new JsonSerializerOptions

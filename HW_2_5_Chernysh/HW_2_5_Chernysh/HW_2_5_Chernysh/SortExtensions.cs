@@ -24,8 +24,8 @@ namespace HW_2_3_Chernysh
                     }
                 }
             }
+
             return vehicles;
-            
         }
     }
 }

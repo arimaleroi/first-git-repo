@@ -10,7 +10,6 @@ namespace HW_2_3_Chernysh.Motorbikes
     {
         public Scooter(int maxSpeed, int weight) : base(maxSpeed, weight)
         {
-
             TypeOfMotorbike = "Scooter";
         }
     }

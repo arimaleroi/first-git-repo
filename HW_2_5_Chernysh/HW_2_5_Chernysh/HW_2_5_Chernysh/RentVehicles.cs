@@ -17,16 +17,12 @@ namespace HW_2_3_Chernysh
         private ILogger consoleLogger;
         private ILogger fileLogger;
 
-
         public RentVehicles(ILogger consoleLogger, ILogger fileLogger)
         {
             this.consoleLogger = consoleLogger;
             this.fileLogger = fileLogger;
-
-
         }
 
-       
         public Vehicle[] vehicles =
            {
                 new Sedan(150, 1600),
@@ -34,16 +30,13 @@ namespace HW_2_3_Chernysh
                 new Suv(220, 2400),
                 new Scooter(60, 80),
                 new Sportbike(300, 190)
-            };
-
+           };
 
         public void OutputVehicles()
         {
             for (int i = 0; i < vehicles.SortByMaxSpeed().Length; i++)
             {
-                
                 Console.WriteLine($"Номер транспорта: {i} | {vehicles[i].ToString()}");
-
             }
         }
 
@@ -56,9 +49,6 @@ namespace HW_2_3_Chernysh
                     consoleLogger.AddLog(new Result(StatusEnum.Error, "Этот транспорт недоступен, Ваш стаж вождения меньше двух лет.", DateTime.Now));
                     fileLogger.AddLog(new Result(StatusEnum.Error, "Этот транспорт недоступен, Ваш стаж вождения меньше двух лет.", DateTime.Now));
                 }
-
-
-
                 else
                 {
                     consoleLogger.AddLog(new Result(StatusEnum.Info, $"Вы успешно арендовали: {vehicles[numberOfVehicle]}", DateTime.Now));

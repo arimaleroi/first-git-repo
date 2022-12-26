@@ -15,8 +15,6 @@ namespace HW_2_3_Chernysh
     {
         public void AddLog(Result log)
         {
-
-
             Console.WriteLine(Json.JsonLogger(log));
         }
     }

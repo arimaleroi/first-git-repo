@@ -33,5 +33,4 @@ namespace HW_2_3_Chernysh
         Error = 0,
         Info = 1
     }
-
 }

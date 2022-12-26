@@ -13,26 +13,14 @@ namespace HW_2_3_Chernysh
 {
     internal class FileLogger : ILogger
     {
-
         public void AddLog(Result log)
         {
             string path = "Logs.json";
-
-
-
-
-
-
-
 
             using (StreamWriter writer = new StreamWriter(path))
             {
                 writer.WriteLine(Json.JsonLogger(log));
             }
         }
-
-
     }
 }
-
-

@@ -10,7 +10,5 @@ namespace HW_2_3_Chernysh
     public interface ILogger
     {
         public void AddLog(Result log);
-
-        
     }
 }

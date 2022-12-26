@@ -10,7 +10,6 @@ namespace HW_2_3_Chernysh.Cars
     {
         public SportCar(int maxSpeed, int weight) : base(maxSpeed, weight)
         {
-
             TypeOfCar = "Sport car";
         }
     }

@@ -8,12 +8,9 @@ namespace HW_2_3_Chernysh
         {
             RentVehicles rentVehicles = new RentVehicles(new ConsoleLogger(), new FileLogger());
 
-
             rentVehicles.OutputVehicles();
 
-
             Console.WriteLine();
-
 
             try
             {
@@ -29,9 +26,6 @@ namespace HW_2_3_Chernysh
             {
                 Console.WriteLine("Некорректный ввод, ведите НОМЕР транспорта.");
             }
-
-
-
         }
     }
 }
