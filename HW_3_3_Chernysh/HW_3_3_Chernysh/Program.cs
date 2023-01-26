@@ -1,5 +1,3 @@
-
-
 namespace HW_3_4_Chernysh
 {
     internal class Program
