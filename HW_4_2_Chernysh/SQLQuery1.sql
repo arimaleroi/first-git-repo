@@ -7,9 +7,9 @@ SELECT TOP 10 * FROM HumanResources.Employee WHERE BirthDate > '1989-09-28'
 --4
 SELECT NationalIDNumber, LoginID, JobTitle FROM HumanResources.Employee WHERE LoginID LIKE '%0' ORDER BY JobTitle ASC
 --5
-SELECT * FROM Person.Person WHERE ModifiedDate > '2008' AND MiddleName IS NOT NULL AND Title IS NULL
+SELECT * FROM Person.Person WHERE ModifiedDate >= '2008-01-01' AND ModifiedDate <= '2008-31-12' AND MiddleName IS NOT NULL AND Title IS NULL
 --6
-SELECT Name FROM HumanResources.Department INNER JOIN HumanResources.EmployeeDepartmentHistory ON EndDate IS NOT NULL GROUP BY Name
+SELECT DISTINCT Name FROM HumanResources.Department INNER JOIN HumanResources.EmployeeDepartmentHistory ON EndDate IS NOT NULL
 --7
 SELECT Sum(CommissionPct) as ComSum FROM Sales.SalesPerson GROUP BY TerritoryID HAVING Sum(CommissionPct) > 0
 --8
