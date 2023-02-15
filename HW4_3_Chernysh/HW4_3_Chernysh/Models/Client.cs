@@ -14,7 +14,6 @@ namespace HW4_3_Chernysh.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
-
         public List<Project> Projects { get; set; } = new List<Project>();
     }
 }
