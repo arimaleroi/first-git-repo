@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Configuration
 {
-    internal class OfficeConfiguration : IEntityTypeConfiguration<Office>
+    public class OfficeConfiguration : IEntityTypeConfiguration<Office>
     {
         public void Configure(EntityTypeBuilder<Office> builder)
         {

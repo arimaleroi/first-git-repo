@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Configuration
 {
-    internal class ClientConfiguration : IEntityTypeConfiguration<Client>
+    public class ClientConfiguration : IEntityTypeConfiguration<Client>
     {
         public void Configure(EntityTypeBuilder<Client> builder)
         {

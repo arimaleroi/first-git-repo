@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Models
 {
-    internal class Office
+    public class Office
     {
         public int OfficeId { get; set; }
         public string Ttitle { get; set; }

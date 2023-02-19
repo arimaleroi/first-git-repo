@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Models
 {
-    internal class Client
+    public class Client
     {
         public int ClientId { get; set; }
         public string FirstName { get; set; }

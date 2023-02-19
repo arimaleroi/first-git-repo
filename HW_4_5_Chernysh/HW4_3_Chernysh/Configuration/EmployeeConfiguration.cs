@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Configuration
 {
-    internal class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
+    public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {

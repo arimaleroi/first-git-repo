@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
+//[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace HW4_3_Chernysh
 {
-    internal class DataBaseContext : DbContext
+    public class DataBaseContext : DbContext
     {
         private string _connectionString;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Models
 {
-    internal class Employee
+    public class Employee
     {
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }

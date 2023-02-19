@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Configuration
 {
-    internal class ProjectConfiguration : IEntityTypeConfiguration<Project>
+    public class ProjectConfiguration : IEntityTypeConfiguration<Project>
     {
         public void Configure(EntityTypeBuilder<Project> builder)
         {

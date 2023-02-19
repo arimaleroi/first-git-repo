@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace HW4_3_Chernysh.Models
 {
-    internal class Db
+    public class Db
     {
         SqlConnection con;
 

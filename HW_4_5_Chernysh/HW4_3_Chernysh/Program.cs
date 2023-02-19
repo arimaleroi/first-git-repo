@@ -6,7 +6,7 @@ using System.Transactions;
 
 namespace HW4_3_Chernysh
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

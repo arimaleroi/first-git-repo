@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HW4_3_Chernysh.Configuration
 {
-    internal class TitleConfiguration : IEntityTypeConfiguration<Title>
+    public class TitleConfiguration : IEntityTypeConfiguration<Title>
     {
         public void Configure(EntityTypeBuilder<Title> builder)
         {
