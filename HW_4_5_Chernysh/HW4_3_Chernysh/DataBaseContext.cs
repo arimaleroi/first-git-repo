@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.CompilerServices;
 
-//[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace HW4_3_Chernysh
 {

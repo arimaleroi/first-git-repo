@@ -15,18 +15,18 @@ namespace HW4_3_Chernysh
                 //1
 
                 var first = from employeeprojects in dbContext.EmployeeProjects
-                                   join employee in dbContext.Employees
-                                   on employeeprojects.EmployeeId equals employee.EmployeeId into temp
-                                   from result in temp.DefaultIfEmpty()
+                            join employee in dbContext.Employees
+                            on employeeprojects.EmployeeId equals employee.EmployeeId into temp
+                            from result in temp.DefaultIfEmpty()
 
-                                   join project in dbContext.Projects
-                                   on employeeprojects.ProjectId equals project.ProjectId into tempSecond
-                                   from resultSecond in tempSecond.DefaultIfEmpty()
-                                   select new { employeeprojects.EmployeeId, result.Title, resultSecond.Name };
+                            join project in dbContext.Projects
+                            on employeeprojects.ProjectId equals project.ProjectId into tempSecond
+                            from resultSecond in tempSecond.DefaultIfEmpty()
+                            select new { employeeprojects.EmployeeId, result.HiredDate, resultSecond.Name };
 
                 //2
 
-                var second = dbContext.Employees.Select(x => new { x.EmployeeId, Difference = EF.Functions.DateDiffDay(x.HiredDate, DateTime.Now) });
+                var second = dbContext.Employees.Select(x => new { x.EmployeeId, Difference = EF.Functions.DateDiffDay(x.HiredDate, DateTime.Now) }).ToList();
                 dbContext.SaveChanges();
 
                 //3
@@ -35,31 +35,34 @@ namespace HW4_3_Chernysh
 
                 try
                 {
-                    (dbContext.Clients.ToList())[3].Email = "newemail@gmail.com";
-
-                    (dbContext.Projects.ToList())[1].Name = "New ProjectName";
-
+                    dbContext.Clients.SingleOrDefault(x => x.ClientId == 3).Email = "newemail@gmail.com";
                     dbContext.SaveChanges();
+
+                    dbContext.Projects.First().Name = "New ProjectName";
+                    dbContext.SaveChanges();
+
                     transaction.Commit();
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     transaction.Rollback();
                 }
 
                 //4
 
-                dbContext.Employees.Add(new Employee 
-                { 
-                    FirstName = "Sergey", LastName = "Chernysh", HiredDate = new DateTime(2022,10,10), 
+                dbContext.Employees.Add(new Employee
+                {
+                    FirstName = "Sergey",
+                    LastName = "Chernysh",
+                    HiredDate = new DateTime(2022, 10, 10),
                     Office = new Office { Ttitle = "New Office", Location = "New Location" },
-                    Title = new Title { Name= "New Title" }
+                    Title = new Title { Name = "New Title" }
                 });
                 dbContext.SaveChanges();
 
                 //5
 
-                dbContext.Employees.Remove((dbContext.Employees.ToList())[0]);
+                dbContext.Employees.Remove(dbContext.Employees.First());
                 dbContext.SaveChanges();
 
                 //6
