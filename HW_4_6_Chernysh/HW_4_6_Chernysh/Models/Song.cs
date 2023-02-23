@@ -12,7 +12,7 @@ namespace HW_4_6_Chernysh.Models
         public string Title { get; set; }
         public TimeSpan Duration { get; set; }
         public DateTime ReleasedDate { get; set; }
-        public virtual int GenreId { get; set; }
+        public int? GenreId { get; set; }
         public virtual Genre Genre { get; set; }
         public ICollection<Artist> Artists { get; set; }
 
