@@ -1,0 +1,23 @@
+.block {
+    width: 800px;
+    overflow: hidden;
+}
+p {
+    font-size: large;
+    text-align: justify;
+
+
+}
+img {
+    padding: 10px;
+}
+img.first {
+    width: 250px;
+    height: 125px;
+    float: left;
+}
+img.second {
+    width: 200px;
+    height: 100px;
+    float: right;
+}
