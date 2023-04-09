@@ -1,0 +1,19 @@
+﻿@model Book[];
+
+@{
+    ViewData["Title"] = "Create Book";
+}
+
+<h1>Добавление книги</h1>
+
+<form method="post">
+    <label>Идентификатор: </label><br />
+        <input type="number" name="id" /><br /><br />
+    <label>Название: </label><br />
+        <input type="text" name="title" /><br /><br />
+    <label>Автор: </label><br />
+        <input type="text" name="author" /><br /><br />
+    <label>Описание: </label><br />
+        <input type="text" name="description" /><br /><br />
+    <input type="submit" value="Добавить" />
+</form>

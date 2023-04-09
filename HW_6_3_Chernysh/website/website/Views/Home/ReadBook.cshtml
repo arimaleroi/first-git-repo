@@ -1,0 +1,20 @@
+﻿@model Book[];
+
+@{
+    ViewData["Title"] = "Read Books";
+}
+
+<h1>Список книг</h1>
+
+@{
+    foreach(var book in Model)
+    {
+        <ul>
+            <li>Идентификатор: @book.Id</li>
+            <li>Название: @book.Title</li>
+            <li>Автор: @book.Author</li>
+            <li>Описание: @book.Description</li>
+        </ul>
+
+    }
+}

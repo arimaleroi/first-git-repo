@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.crud {
+    font-size: 36px;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+}
+.crudLi {
+    list-style-type: none;
+    border: solid 1px gray;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 30px;
+}
+
+.buttonLi {
+    border: solid 1px gray;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 30px;
+    width: 50%;
+    background-color: #ffd800
+}
+
+.buttonLi:hover {
+    background-color: #4800ff;
+}
