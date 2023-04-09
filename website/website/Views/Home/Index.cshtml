@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>CRUD над книгами</h1>
+</div>
+
+<div class="main">
+    <div class="crud">
+        <button class="buttonLi">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CreateBook">Create</a>
+        </button>
+        <button class="buttonLi">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ReadBook">Read</a>
+        </button>
+        <button class="buttonLi">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UpdateBook">Update</a>
+        </button>
+        <button class="buttonLi">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DeleteBook">Delete</a>
+        </button>
+    </div>
+</div>
