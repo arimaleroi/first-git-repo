@@ -20,7 +20,7 @@ namespace HW_6_1_Chernysh.Controllers
         }
 
         // GET: api/<BooksController>
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Customer")]
         [HttpGet]
         public async Task<IActionResult> GetBooksAsync()
         {
@@ -35,14 +35,16 @@ namespace HW_6_1_Chernysh.Controllers
         }
 
         // POST api/<BooksController>
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateBookAsync([FromBody] Book book)
         {
             await _bookRepository.CreateBookAsync(book);
             return StatusCode(201);
         }
-        
+
         // PUT api/<BooksController>/5
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateBookAsync(int id, [FromBody] Book updatedBook)
         {
@@ -51,6 +53,7 @@ namespace HW_6_1_Chernysh.Controllers
         }
 
         // DELETE api/<BooksController>/5
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBookAsyncId(int id)
         {
