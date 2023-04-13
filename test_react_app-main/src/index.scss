@@ -1,0 +1,117 @@
+$theme-colors: (
+  "info": tomato,
+  "danger": rgba(233, 255, 88, 0.541),
+
+);
+
+button {
+  background-image: -webkit-gradient(
+    linear,
+        left top,
+        left bottom,
+        from(rgba(42, 67, 143, 0.85)),
+        color-stop(75%, rgba(88, 58, 117, 0.85))
+  );
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  font-weight: 500;
+  padding: 3px 6px 3px 6px;
+  float: left;
+  position: relative;
+  top: -3px;
+}
+
+
+
+pre {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 12px 0;
+  font-size: 12px;
+  background-color: rgba(231, 213, 255, 0.15);
+  border-radius: 3px;
+  padding: 12px;
+  border: 1px solid rgba(95, 69, 120, 0.1);
+  overflow: scroll;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+
+li {
+  cursor: pointer;
+  border-bottom: 1px solid #f2e8ff;
+  color: rgba(49,37,64,0.6);
+  padding: 12px;
+  font-size: 16px;
+  text-align: right;
+  display: list-item;
+}
+
+.api {
+  padding-top: 24px;
+  display: block;
+}
+
+.endpoints {
+  width: 30%;
+  margin-right: 24px;
+  position: relative;
+  margin-top: 72px;
+  display: inline-block
+}
+
+.output {
+  width: 60%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.request {
+  width: 40%;
+
+  display: inline-block;
+  text-align: left;
+  margin: 0px 6px 0px 6px;
+  vertical-align: top;
+}
+.request-title {
+  border: 1px solid rgba(95, 69, 120, 0.1);
+  border-radius: 3px;
+  padding: 12px;
+
+  position: relative;
+}
+.link, .response-code {
+  color: #4ba144;
+  display: block;
+  font-size: 16px;
+}
+
+.response {
+  width: 55%;
+  display: inline-block;
+  text-align: left;
+  margin: 0px 6px 0px 6px;
+  vertical-align: top;
+}
+.response-title {
+  border: 1px solid rgba(95, 69, 120, 0.1);
+  border-radius: 3px;
+  padding: 12px;
+
+  position: relative;
+}
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
